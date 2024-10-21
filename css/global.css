@@ -1,0 +1,41 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Poppins:wght@400&display=swap');
+
+/* Global Body Styling */
+body {
+    font-family: 'Lora', serif;
+    color: #003049; /* Dark Navy for text */
+    background-color: #FDF0D5; /* Soft beige background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Link Styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hover Animation for Mobile Menu Items */
+.nav-links a:hover {
+    background-color: #669BBC; /* Soft Blue on hover */
+    color: #C1121F; /* Bright Red on hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global Button Styling */
+button {
+    background-color: #C1121F;
+    color: #FDF0D5;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #780000; /* Deep Red on hover */
+}

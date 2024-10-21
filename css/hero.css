@@ -1,0 +1,138 @@
+/* Hero Carousel */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height */
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease-in-out; /* Smooth scroll transition */
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex; /* Show all slides by default */
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.carousel-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #FDF0D5;
+}
+
+.carousel-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+    color: #FDF0D5;
+}
+
+.carousel-content p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: #FDF0D5;
+}
+
+.carousel-content .btn {
+    background-color: #C1121F;
+    color: #FDF0D5;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-content .btn:hover {
+    background-color: #780000;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between the arrows and dots */
+    z-index: 3;
+}
+
+/* Dots centered, arrows on the sides */
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #FDF0D5;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .dot.active {
+    background-color: #C1121F; /* Active dot in red */
+}
+
+/* Carousel Arrows */
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #FDF0D5;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
+
+.arrow-prev, .arrow-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-prev {
+    margin-right: 30px; /* Ensure space between arrow and dots */
+}
+
+.arrow-next {
+    margin-left: 30px; /* Ensure space between arrow and dots */
+}
+
+.arrow:hover {
+    background-color: #C1121F; /* Background turns red on hover */
+    color: #FDF0D5; /* Keep the arrow icon white on hover */
+
+}

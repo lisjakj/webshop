@@ -1,0 +1,214 @@
+/* Global Styles for the Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    width: 90%;
+    background-color: rgba(253, 240, 213, 0.95); /* Semi-transparent Soft Beige */
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-wrap: nowrap;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #780000; /* Deep Red for the logo */
+    line-height: 1;
+}
+
+.heart-icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.nav-links a {
+    font-family: 'Poppins', sans-serif;
+    color: #003049; /* Dark Navy */
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #669BBC;
+    color: #FDF0D5;
+}
+
+.nav-links a.active {
+    background-color: #C1121F;
+    color: #FDF0D5;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* Scrolled Navbar Styles */
+.navbar.scrolled {
+    background-color: #669BBC; /* Matches Testimonials Section */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow when scrolled */
+}
+
+.navbar.scrolled .logo {
+    color: #FDF0D5; /* Matches the background color */
+}
+
+.navbar.scrolled .nav-links a {
+    color: #FDF0D5; /* Matches the background color */
+}
+
+.navbar.scrolled .nav-links a:hover {
+    background-color: #C1121F;
+    color: #FDF0D5;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #780000;
+    margin: 4px 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .hamburger span {
+    background-color: #FDF0D5; /* Change burger icon to background color when scrolled */
+}
+
+/* Adjust for mid-sized screens (tablets) */
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #FDF0D5;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 50%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar.scrolled .nav-links {
+        background-color: #669BBC; /* Dropdown background matches testimonials color when scrolled */
+    }
+
+    .nav-links a {
+        padding: 10px 15px;
+        border-bottom: 1px solid #C1121F;
+        width: 100px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    .navbar.scrolled .nav-links a {
+        color: #FDF0D5; /* Dropdown items to background color when scrolled */
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a.active {
+        background-color: #C1121F;
+        padding: 10px 20px;
+        border-radius: 50px;
+        width: 100px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    .nav-links.show {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-links.hide {
+        animation: slideUp 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+}
