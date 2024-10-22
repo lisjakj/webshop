@@ -5,7 +5,7 @@
 body {
     font-family: 'Lora', serif;
     color: #003049; /* Dark Navy for text */
-    background-color: #FDF0D5; /* Soft beige background */
+    background-color: #669BBC; /* Soft beige background #FDF0D5*/
     margin: 0;
     padding: 0;
 }
@@ -14,13 +14,6 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-/* Hover Animation for Mobile Menu Items */
-.nav-links a:hover {
-    background-color: #669BBC; /* Soft Blue on hover */
-    color: #C1121F; /* Bright Red on hover */
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Global Button Styling */

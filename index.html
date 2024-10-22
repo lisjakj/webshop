@@ -1,136 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heartistry - Premium Couples' Gifts & Accessories</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/perks.css" />
     <script src="js/navbar.js" defer></script>
     <script src="js/hero-carousel.js" defer></script>
-</head>
-<body>
+    <script src="js/products.js" defer></script>
+  </head>
+  <body>
     <!-- Header and Navigation -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C1121F">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+      <nav class="navbar">
+        <div class="logo">
+          <svg
+            class="heart-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="#C1121F"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
                              4.42 3 7.5 3c1.74 0 3.41 0.81 
                              4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
                              5.42 22 8.5c0 3.78-3.4 6.86-8.55 
-                             11.54L12 21.35z"/>
-                </svg>
-                Heartistry
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="active">Home</a>
-                <a href="#shop-all">Shop All</a>
-                <a href="#categories">Categories</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+                             11.54L12 21.35z"
+            />
+          </svg>
+          Heartistry
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="necklaces.html">Necklaces</a>
+          <a href="bracelets.html">Bracelets</a>
+          <a href="#about">Cart</a>
+          <a href="#contact">F.A.Q</a>
+        </div>
+        <div
+          class="hamburger"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <!-- Hero Section (Carousel) -->
     <section class="hero-carousel" id="home">
-        <div class="carousel">
-            <div class="carousel-track">
-                <!-- Slide 1 -->
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/1600x600" alt="Celebrate Love with Heartistry">
-                    <div class="carousel-content">
-                        <h2>Celebrate Love with Heartistry</h2>
-                        <p>Discover exclusive, handcrafted gifts designed to cherish every moment.</p>
-                        <a href="#featured-products" class="btn">Shop Now</a>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/1600x600/111111" alt="Explore Our Premium Gifts">
-                    <div class="carousel-content">
-                        <h2>Explore Our Premium Gifts</h2>
-                        <p>Unique, personalized gifts for every special occasion.</p>
-                        <a href="#featured-products" class="btn">Shop Now</a>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/1600x600/222222" alt="Handcrafted Gifts for Couples">
-                    <div class="carousel-content">
-                        <h2>Handcrafted Gifts for Couples</h2>
-                        <p>Make every moment memorable with our exquisite selection.</p>
-                        <a href="#featured-products" class="btn">Shop Now</a>
-                    </div>
-                </div>
+      <div class="carousel">
+        <div class="carousel-track">
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <img src="images/1.png" alt="Celebrate Love with Heartistry" />
+            <div class="carousel-content">
+              <h2>Celebrate Love with Heartistry</h2>
+              <p>
+                Discover exclusive, handcrafted gifts designed to cherish every
+                moment.
+              </p>
+              <a href="#featured-products" class="btn">Shop Now</a>
             </div>
-            <!-- Carousel Controls (Arrows and Dots) -->
-            <div class="carousel-controls">
-                <button class="arrow arrow-prev">&#10094;</button> <!-- Left Arrow -->
-                <div class="carousel-indicators">
-                    <span class="dot active" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                </div>
-                <button class="arrow arrow-next">&#10095;</button> <!-- Right Arrow -->
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <img src="images/3.png" alt="Explore Our Premium Gifts" />
+            <div class="carousel-content">
+              <h2>Explore Our Premium Gifts</h2>
+              <p>Unique, personalized gifts for every special occasion.</p>
+              <a href="#featured-products" class="btn">Shop Now</a>
             </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-slide">
+            <img src="images/4.jpg" alt="Handcrafted Gifts for Couples" />
+            <div class="carousel-content">
+              <h2>Handcrafted Gifts for Couples</h2>
+              <p>Make every moment memorable with our exquisite selection.</p>
+              <a href="#featured-products" class="btn">Shop Now</a>
+            </div>
+          </div>
         </div>
+        <!-- Carousel Controls (Arrows and Dots) -->
+        <div class="carousel-controls">
+          <button class="arrow arrow-prev">&#10094;</button>
+          <!-- Left Arrow -->
+          <div class="carousel-indicators">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+          <button class="arrow arrow-next">&#10095;</button>
+          <!-- Right Arrow -->
+        </div>
+      </div>
     </section>
 
+    <!-- Hero Extension with Wave -->
+    <!-- Wave Separator between Hero and Products -->
+    <div class="wave-text-container">
+      <div class="wave-text">
+        <span class="arrow arrow-left">&#8595;</span>
+        <!-- Left arrow -->
+        Keep Scrolling for Major Discounts
+        <span class="arrow arrow-right">&#8595;</span>
+        <!-- Right arrow -->
+      </div>
+    </div>
+
+    <!-- Wave Separator -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+      perserveAspectRatio="none"
+    >
+      <path
+        fill="#FDF0D5"
+        fill-opacity="1"
+        d="M0,128L60,149.3C120,171,240,213,360,240C480,267,600,277,720,250.7C840,224,960,160,1080,154.7C1200,149,1320,203,1380,229.3L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
+    </svg>
+
+    <!-- Featured Products Section -->
     <!-- Featured Products Section -->
     <section id="featured-products" class="featured-products">
-        <h2>Our Premium Selection</h2>
-        <div class="products-container">
-            <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Skyline Projector">
-                <h3>Skyline Projector</h3>
-                <p>Create a calming skyline right in your room.</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/300" alt="LED Mood Lights">
-                <h3>LED Mood Lights</h3>
-                <p>Set the perfect ambiance with smart lighting.</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Bluetooth Speaker">
-                <h3>Bluetooth Speaker</h3>
-                <p>Enjoy high-quality sound to complement your space.</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
+      <h2>Our Premium Selection</h2>
+      <div class="products-container">
+        <a href="product.html" class="product-link">
+          <div class="product">
+            <img src="images/1.png" alt="Skyline Projector" />
+            <h3>Skyline Projector</h3>
+            <p>Create a calming skyline right in your room.</p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </a>
+        <a href="product.html" class="product-link">
+          <div class="product">
+            <img src="images/3.png" alt="LED Mood Lights" />
+            <h3>LED Mood Lights</h3>
+            <p>Set the perfect ambiance with smart lighting.</p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </a>
+        <a href="product.html" class="product-link">
+          <div class="product">
+            <img src="images/9.jpg" alt="Bluetooth Speaker" />
+            <h3>Bluetooth Speaker</h3>
+            <p>Enjoy high-quality sound to complement your space.</p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </a>
+        <a href="product.html" class="product-link">
+          <div class="product">
+            <img src="images/4.jpg" alt="Couples' Journal" />
+            <h3>Couples' Journal</h3>
+            <p>Record your memories and milestones together.</p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </a>
+        <a href="product.html" class="product-link">
+          <div class="product">
+            <img src="images/3.png" alt="Personalized Mugs" />
+            <h3>Personalized Mugs</h3>
+            <p>Custom designs for a perfect morning.</p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </a>
+        <a href="product.html" class="product-link">
+          <div class="product">
+            <img src="images/1.png" alt="Romantic Candle Set" />
+            <h3>Romantic Candle Set</h3>
+            <p>Create the perfect ambiance for your evenings.</p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Perks Section with Top and Bottom Waves -->
+    <section id="perks" class="perks-section">
+      <!-- Top Wave -->
+      <div class="wave-top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#669BBC"
+            fill-opacity="1"
+            d="M0,128L80,192C160,256,320,256,480,192C640,128,800,0,960,32C1120,64,1280,256,1360,288L1440,320L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="perks-container">
+        <div class="perk">
+          <div class="perk-icon">
+            <img src="images/high-quality.png" alt="Quality" />
+          </div>
+          <p>Premium Quality</p>
         </div>
+        <div class="perk">
+          <div class="perk-icon">
+            <img src="images/cashback.png" alt="Money Back" />
+          </div>
+          <p>30-Day Money Back Guarantee</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">
+            <img src="images/shopping-cart.png" alt="Express delivery" />
+          </div>
+          <p>Express Shipping</p>
+        </div>
+        <div class="perk">
+          <div class="perk-icon">
+            <img src="images/24-hours-support.png" alt="24 Hour Support" />
+          </div>
+          <p>24-Hour Support</p>
+        </div>
+      </div>
+
+      <!-- Bottom Wave -->
+      <div class="wave-bottom">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#669BBC"
+            fill-opacity="1"
+            d="M0,192L80,165.3C160,139,320,85,480,74.7C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
     </section>
 
     <!-- Testimonial Section -->
     <section class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="carousel">
-            <div class="testimonial">
-                <p>"Heartistry transformed our home with their beautiful and thoughtful gifts. Every item feels so special!"</p>
-                <span>- Emily & John</span>
-            </div>
-            <div class="testimonial">
-                <p>"The quality and design of Heartistry's products are unmatched. Highly recommend for any special occasion."</p>
-                <span>- Sarah & Michael</span>
-            </div>
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-track">
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/couple-6962202_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "Heartistry transformed our home with their beautiful and
+              thoughtful gifts. Every item feels so special!"
+            </p>
+            <span>- Emily & John</span>
+          </div>
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/relationship-7536124_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "The quality and design of Heartistry's products are unmatched.
+              Highly recommend for any special occasion."
+            </p>
+            <span>- Sarah & Michael</span>
+          </div>
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/love-6575234_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "Absolutely in love with the personalized gifts we received.
+              Perfect for anniversaries!"
+            </p>
+            <span>- James & Lisa</span>
+          </div>
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/love-6714607_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "Every product is so unique and thoughtful. Heartistry helped make
+              our celebration special!"
+            </p>
+            <span>- David & Hannah</span>
+          </div>
+          <!-- Duplicate set for continuous scrolling -->
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/couple-6962202_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "Heartistry transformed our home with their beautiful and
+              thoughtful gifts. Every item feels so special!"
+            </p>
+            <span>- Emily & John</span>
+          </div>
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/relationship-7536124_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "The quality and design of Heartistry's products are unmatched.
+              Highly recommend for any special occasion."
+            </p>
+            <span>- Sarah & Michael</span>
+          </div>
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/love-6575234_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "Absolutely in love with the personalized gifts we received.
+              Perfect for anniversaries!"
+            </p>
+            <span>- James & Lisa</span>
+          </div>
+          <div class="testimonial">
+            <img
+              class="testimonial-img"
+              src="images/love-6714607_640.jpg"
+              alt="Couple"
+            />
+            <p>
+              "Every product is so unique and thoughtful. Heartistry helped make
+              our celebration special!"
+            </p>
+            <span>- David & Hannah</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Heartistry. All rights reserved.</p>
+      <p>&copy; 2024 Heartistry. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>

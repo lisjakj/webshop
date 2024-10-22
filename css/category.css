@@ -1,0 +1,69 @@
+/* Category Hero Section */
+.category-hero {
+    background-color: #FDF0D5; /* Beige */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.category-hero h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #003049; /* Dark blue */
+    padding-top: 3rem;
+}
+
+.category-hero p {
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    color: #C1121F; /* Deep red */
+    margin-top: 1rem;
+}
+
+/* Wave Separator */
+.wave-separator {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    height: 100px; /* Limit the height of the wave */
+}
+
+/* SVG Styling */
+.wave-separator svg {
+    display: block;
+    width: 100%;
+    height: 100px; /* Set a fixed height to prevent excessive vertical growth */
+    max-height: 120px; /* Optional: Set a max height */
+    background-color: transparent;
+    transform: translateY(1px); /* Small adjustment to remove any gap */
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 1024px) {
+    .category-hero h1 {
+        font-size: 3rem; /* Increase heading size for larger screens */
+    }
+
+    .wave-separator {
+        height: 80px; /* Slightly reduce wave height on large screens */
+    }
+
+    .wave-separator svg {
+        height: 80px; /* Keep the wave's height consistent on larger screens */
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .category-hero h1 {
+        font-size: 2rem;
+    }
+
+    .wave-separator {
+        height: 60px; /* Reduce wave height on small screens */
+    }
+
+    .wave-separator svg {
+        height: 60px; /* Match the wave's height on small screens */
+    }
+}

@@ -1,0 +1,209 @@
+/* Product Detail Hero Section */
+.product-hero {
+    background-color: #fdf0d5; /* Beige */
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+.product-hero h1 {
+    font-size: 2.5rem; /* Adjusted for consistency */
+    color: #003049; /* Dark blue */
+    font-family: "Playfair Display", serif;
+    padding-top: 6rem;
+}
+
+.product-hero p {
+    font-size: 1.2rem; /* Slightly smaller for responsiveness */
+    color: #780000; /* Deep Red */
+    font-family: "Lora", serif;
+}
+
+/* Product Detail Section */
+.product-detail {
+    background-color: #669bbc; /* Blue */
+    padding: 4rem 2rem;
+}
+
+.product-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1100px; /* Slightly reduced max-width */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.product-image img {
+    width: 100%; /* Make image responsive */
+    max-width: 400px; /* Fixed size for larger screens */
+    border-radius: 10px;
+}
+
+.product-info {
+    max-width: 500px;
+    color: #fdf0d5; /* Beige */
+}
+
+.product-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem; /* Adjusted for responsiveness */
+    margin-bottom: 1rem;
+}
+
+.product-info p {
+    font-family: "Lora", serif;
+    font-size: 1rem; /* Consistent with other sections */
+    margin-bottom: 1.2rem;
+}
+
+.product-info .price {
+    font-size: 2.5rem; /* Consistent sizing */
+    color: #c1121f; /* Bright red */
+    margin-bottom: 1.5rem;
+}
+
+.product-info .btn {
+    background-color: #c1121f;
+    color: #fdf0d5;
+    padding: 0.6rem 1.3rem; /* Adjust padding for responsiveness */
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.product-info .btn:hover {
+    background-color: #780000; /* Deep Red */
+}
+
+/* Product Features Section */
+.product-features {
+    background-color: #fdf0d5; /* Beige */
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: -5px;
+}
+
+.product-features h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem; /* Adjusted for consistency */
+    color: #003049; /* Dark Blue */
+    margin-bottom: 1.5rem;
+}
+
+.product-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-features li {
+    font-family: "Lora", serif;
+    font-size: 1.1rem; /* Consistent font size */
+    color: #780000; /* Deep Red */
+    margin-bottom: 1rem;
+}
+
+/* Wave Separator */
+.wave-separator {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    height: 80px; /* Fixed height for the wave */
+    background-color: transparent;
+}
+
+.wave-separator svg {
+    display: block;
+    width: 100%; /* Ensures the wave scales horizontally */
+    height: 100%; /* Ensures the wave's height stays fixed */
+    background-color: transparent;
+    transform: translateY(-1px); /* Adjust to remove any gap */
+    margin: -1px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .product-hero h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .product-hero p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .product-detail-container {
+        flex-direction: column; /* Stack content on smaller screens */
+        gap: 2rem; /* Adjust gap */
+    }
+
+    .product-image img {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .product-info h2 {
+        font-size: 1.8rem; /* Adjusted for responsiveness */
+    }
+
+    .product-info p, .product-info{
+        font-size: 1rem; /* Make text smaller on small screens */
+    }
+
+    .product-info .price {
+        font-size: 2rem;
+    }
+
+    .product-info .btn {
+        font-size: 0.85rem; /* Adjust button size */
+        padding: 0.5rem 1rem;
+    }
+
+    .product-features h2 {
+        font-size: 1.8rem; /* Adjust for smaller screens */
+    }
+
+    .product-features li {
+        font-size: 1rem; /* Slightly smaller text */
+    }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 480px) {
+    .product-hero h1 {
+        font-size: 1.8rem; /* Further adjustment for extra small screens */
+    }
+
+    .product-hero p {
+        font-size: 0.9rem; /* Make smaller for extra small screens */
+    }
+
+    .product-detail {
+        padding: 3rem 1rem; /* Reduce padding */
+    }
+
+    .product-image img {
+        max-width: 100%; /* Full width */
+    }
+
+    .product-info h2 {
+        font-size: 1.6rem; /* Smaller heading */
+    }
+
+    .product-info p {
+        font-size: 0.9rem; /* Further reduce description text */
+    }
+
+    .product-info .btn {
+        font-size: 0.8rem; /* Smaller button */
+        padding: 0.4rem 0.8rem; /* Adjust padding */
+    }
+
+    .product-features h2 {
+        font-size: 1.6rem;
+    }
+
+    .product-features li {
+        font-size: 0.9rem;
+    }
+}

@@ -2,27 +2,28 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-let menuOpen = false;
-
+// Toggle hamburger menu on click
 hamburger.addEventListener('click', () => {
-    if (!menuOpen) {
-        navLinks.classList.remove('hide');  // Ensure 'hide' class is removed before showing
-        navLinks.classList.add('show');
-    } else {
-        navLinks.classList.remove('show');  // Ensure 'show' class is removed before hiding
-        navLinks.classList.add('hide');
-    }
+    navLinks.classList.toggle('show');
     hamburger.classList.toggle('open');
-    menuOpen = !menuOpen;
+});
+
+// Close hamburger menu when clicking outside of it
+document.addEventListener('click', (event) => {
+    const isClickInside = hamburger.contains(event.target) || navLinks.contains(event.target);
+    if (!isClickInside) {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('open');
+    }
 });
 
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetElement = document.querySelector(this.getAttribute('href'));
-        if(targetElement) {
+        if (targetElement) {
             window.scrollTo({
                 top: targetElement.offsetTop - 70, // Adjust offset for fixed navbar
                 behavior: 'smooth'
@@ -31,8 +32,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add a scroll event listener
-window.addEventListener('scroll', function() {
+// Add a scroll event listener for navbar styling
+window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {  // Adjust the scroll distance as needed
         navbar.classList.add('scrolled');

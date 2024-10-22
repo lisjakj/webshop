@@ -1,12 +1,35 @@
 footer {
-    background-color: #003049; /* Dark Navy */
-    color: #FDF0D5; /* Soft Beige */
+    position: relative;
+    background-color: #FDF0D5; /* Beige background */
+    color: #003049; /* Dark Navy text */
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
+    padding: 2rem;
+    margin-top: 3rem; /* Extra margin to leave space for the section above */
+    border-radius: 50% 50% 0 0; /* Rounded top corners for the hill effect */
+    height: auto; /* Let the height adjust based on content */
+    min-height: 100px; /* Ensure a minimum height */
+    z-index: 1;
+    overflow: hidden; /* Ensure hill is clipped properly if the content expands */
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -30px; /* Adjust this to control space above */
+    left: 0;
+    right: 0;
+    background-color: #669BBC; /* Match background color of the previous section */
+    height: 30px; /* Reduced height for the space above */
+    z-index: -1;
 }
 
 footer p {
     font-family: 'Lora', serif;
     font-size: 1rem;
+    margin: 0;
+    line-height: 1.5; /* Better line spacing for multiple lines */
+}
+
+footer p:not(:last-child) {
+    margin-bottom: 1rem; /* Add space between paragraphs if more text is added */
 }

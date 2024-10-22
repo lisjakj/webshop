@@ -1,67 +1,270 @@
+/* Style for product links */
+.product-link {
+    display: block;
+    text-decoration: none; /* Remove default text underline */
+    justify-content: center;
+}
+
+/* Featured Products Section */
 .featured-products {
     padding: 4rem 2rem;
     text-align: center;
+    background-color: #669BBC; /* Blue background */
+    position: relative;
 }
 
+/* Featured Products Title */
 .featured-products h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #003049; /* Dark Navy */
+    color: #FDF0D5; /* Beige text */
 }
 
+/* Products Container */
 .products-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    gap: 1.5rem; /* Space between product cards */
+    max-width: 1100px; /* Slightly reduce the max width */
+    margin: 0 auto; /* Center the grid container */
+    justify-items: center; /* Center items horizontally */
 }
 
+/* Individual Product Card */
 .product {
-    background-color: #fff;
-    padding: 1.5rem;
+    background-color: #FDF0D5; /* Beige background color */
+    padding: 1rem; /* Reduced padding */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps button aligned to the bottom */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ensures the card takes full width of the grid column */
+    max-width: 300px; /* Reduce max-width for large screens */
+    height: 450px; /* Fixed height for consistency */
 }
 
 .product:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Move the product slightly up on hover */
 }
 
+/* Image Styling */
 .product img {
     width: 100%;
-    height: auto;
+    height: 180px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image fits nicely */
     border-radius: 10px;
 }
 
+/* Product Title */
 .product h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Slightly smaller font size */
     color: #780000; /* Deep Red */
-    margin: 1rem 0 0.5rem;
+    margin: 0.8rem 0 0.5rem;
+    line-height: 1.2rem; /* Control line height to minimize vertical growth */
+    height: 2.8rem; /* Set fixed height to ensure two-line titles don’t affect layout */
+    overflow: hidden; /* Avoid overflow from long titles */
+    text-overflow: ellipsis; /* Handle overflow with ellipsis */
 }
 
+/* Product Description */
 .product p {
     font-family: 'Lora', serif;
     color: #003049; /* Dark Navy */
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Ensures the description takes up available space, pushing the button down */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem; /* Slightly reduced font size */
+    height: 3rem; /* Ensure consistent height for descriptions */
 }
 
+/* Button Styling */
 .product .btn {
     background-color: #C1121F; /* Bright Red */
-    color: #FDF0D5; /* Soft Beige */
-    padding: 0.5rem 1.5rem;
+    color: #FDF0D5; /* Beige */
+    padding: 0.4rem 1.2rem; /* Adjust padding */
     border-radius: 50px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Slightly smaller button font size */
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-top: auto; /* Ensures button stays at the bottom of the card */
+    align-self: center; /* Keep the button centered */
 }
 
 .product .btn:hover {
     background-color: #780000; /* Deep Red */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 products per row on small screens */
+        justify-content: center; /* Ensure the entire grid is centered */
+    }
+    .product {
+        max-width: 230px; /* Adjust the width for small screens */
+        height: 380px; /* Adjust the height for small screens */
+    }
+    .product p {
+        font-size: 0.85rem; /* Reduce font size on small screens */
+    }
+    .product h3 {
+        height: 2.4rem; /* Adjust title height to avoid pushing button down */
+    }
+    .product .btn {
+        font-size: 0.85rem; /* Reduce button font size */
+        padding: 0.4rem 1rem; /* Adjust padding for small screens */
+    }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: 1fr; /* Display 1 product per row on extra small screens */
+        justify-content: center; /* Ensure the entire grid is centered */
+    }
+    .product {
+        max-width: 100%; /* Full width for extra small screens */
+        height: 300px; /* Adjust height for extra small screens */
+    }
+    .product h3 {
+        font-size: 1.2rem; /* Slightly reduce font size for extra small screens */
+        height: 2.4rem; /* Ensure title fits without pushing content */
+    }
+    .product p {
+        font-size: 0.75rem; /* Reduce font size further */
+    }
+    .product .btn {
+        font-size: 0.8rem; /* Reduce button font size */
+        padding: 0.3rem 1rem; /* Adjust padding for extra small screens */
+    }
+}
+
+/* Button Seesaw Keyframes */
+@keyframes seesaw {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Add delays */
+.product:nth-child(1) .btn {
+    animation-delay: 0s;
+}
+
+.product:nth-child(2) .btn {
+    animation-delay: 1.5s;
+}
+
+.product:nth-child(3) .btn {
+    animation-delay: 3s;
+}
+
+.product:nth-child(4) .btn {
+    animation-delay: 4.5s;
+}
+
+.product:nth-child(5) .btn {
+    animation-delay: 6s;
+}
+
+.product:nth-child(6) .btn {
+    animation-delay: 7.5s;
+}
+
+/* Wave Separator */
+.wave-separator {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    height: 80px; /* Fixed height for the wave */
+    background-color: transparent;
+}
+
+.wave-separator svg {
+    display: block;
+    width: 100%; /* Ensures the wave scales horizontally */
+    height: 100%; /* Ensures the wave's height stays fixed */
+    background-color: transparent;
+    transform: translateY(-1px); /* Adjust to remove any gap */
+}
+
+/* Beige space above the wave for text */
+.wave-text-container {
+    background-color: #FDF0D5; /* Beige background */
+    padding: 2rem 0 1rem; /* Adjust padding for a thinner appearance */
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure text is above the wave */
+}
+
+.wave-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #C1121F; /* Bright red text */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wave-text .arrow {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: #C1121F; /* Bright red arrows */
+    animation: bounce 2s infinite;
+}
+
+.wave-text .arrow:hover {
+    background-color: #FDF0D5; /* Bright red arrows */
+}
+
+.arrow-left {
+    animation-delay: 0.5s;
+}
+
+.arrow-right {
+    animation-delay: 1s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Adjust wave size and connection on larger screens */
+@media (min-width: 1024px) {
+    .wave-separator {
+        height: 80px; /* Fixed wave height for larger screens */
+    }
+
+    .wave-separator svg {
+        height: 80px; /* Keep the wave's height consistent */
+    }
+
+    .wave-text-container {
+        padding: 1rem 0 0.5rem; /* Reduce padding for a slimmer look */
+    }
 }

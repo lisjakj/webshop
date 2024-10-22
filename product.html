@@ -1,62 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heartistry - Skyline Projector</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/footer.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heartistry - Product Detail</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/product-detail.css" />
+    <script src="js/navbar.js" defer></script>
+  </head>
+  <body>
     <!-- Header and Navigation -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C1121F">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
-                             4.42 3 7.5 3c1.74 0 3.41 0.81 
-                             4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
-                             5.42 22 8.5c0 3.78-3.4 6.86-8.55 
-                             11.54L12 21.35z"/>
-                </svg>
-                Heartistry
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#featured-products">Shop All</a>
-                <a href="index.html#categories">Categories</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="hamburger" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <svg
+            class="heart-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="#C1121F"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+          Heartistry
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="necklaces.html">Necklaces</a>
+          <a href="bracelets.html">Bracelets</a>
+          <a href="cart.html">Cart</a>
+          <a href="faq.html">F.A.Q</a>
+        </div>
+        <div
+          class="hamburger"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
+
+    <!-- Product Detail Hero Section -->
+    <section class="product-hero">
+      <div class="hero-content">
+        <h1>Elegant Necklace</h1>
+        <p>A symbol of eternal love and beauty.</p>
+      </div>
+    </section>
+
+    <!-- First Wave Separator: Beige to Blue -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#FDF0D5"
+        fill-opacity="1"
+        d="M0,288L60,266.7C120,245,240,203,360,165.3C480,128,600,96,720,96C840,96,960,128,1080,160C1200,192,1320,224,1380,240L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
+    </svg>
 
     <!-- Product Detail Section -->
     <section class="product-detail">
-        <div class="product-images">
-            <img src="https://via.placeholder.com/600" alt="Skyline Projector">
-            <!-- Add more images if needed -->
+      <div class="product-detail-container">
+        <div class="product-image">
+          <img src="images/4.jpg" alt="Elegant Necklace" />
         </div>
         <div class="product-info">
-            <h2>Skyline Projector</h2>
-            <p class="price">$199.99</p>
-            <p class="description">
-                Transform your room into a serene skyline with our premium Skyline Projector. Featuring high-resolution projection and customizable settings to create the perfect ambiance for any occasion.
-            </p>
-            <button>Add to Cart</button>
+          <h2>Elegant Necklace</h2>
+          <p>
+            This beautifully handcrafted necklace is a symbol of love, elegance,
+            and sophistication. It is made from the finest materials and
+            features a stunning design that will complement any outfit.
+          </p>
+          <p class="price">$129.99</p>
+          <button class="btn">Add to Cart</button>
         </div>
+      </div>
     </section>
+
+    <!-- Second Wave Separator: Blue to Beige -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#FDF0D5"
+        fill-opacity="1"
+        d="M0,160L30,165.3C60,171,120,181,180,181.3C240,181,300,171,360,192C420,213,480,267,540,261.3C600,256,660,192,720,186.7C780,181,840,235,900,245.3C960,256,1020,224,1080,181.3C1140,139,1200,85,1260,64C1320,43,1380,53,1410,58.7L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+      ></path>
+    </svg>
+
+    <!-- Product Features Section -->
+    <section class="product-features">
+      <h2>Why You'll Love It</h2>
+      <ul>
+        <li>Handcrafted with premium materials</li>
+        <li>Timeless, elegant design</li>
+        <li>Perfect for anniversaries and special occasions</li>
+        <li>Comes with a beautiful gift box</li>
+        <li>Free shipping & 30-day returns</li>
+      </ul>
+    </section>
+
+    <!-- Third Wave Separator: Beige to Blue -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#FDF0D5"
+        fill-opacity="1"
+        d="M0,96L30,96C60,96,120,96,180,106.7C240,117,300,139,360,170.7C420,203,480,245,540,261.3C600,277,660,267,720,224C780,181,840,107,900,74.7C960,43,1020,53,1080,69.3C1140,85,1200,107,1260,149.3C1320,192,1380,256,1410,288L1440,320L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Heartistry. All rights reserved.</p>
+      <p>&copy; 2024 Heartistry. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>

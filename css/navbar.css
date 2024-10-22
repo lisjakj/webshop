@@ -1,4 +1,4 @@
-/* Global Styles for the Navbar */
+/* Global Styles for the Navbar background-color */
 .navbar {
     position: fixed;
     top: 0;
@@ -6,7 +6,7 @@
     right: 0;
     margin: 10px auto;
     width: 90%;
-    background-color: rgba(253, 240, 213, 0.95); /* Semi-transparent Soft Beige */
+    background-color: #669BBC; /* Blue background */
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #780000; /* Deep Red for the logo */
+    color: #FDF0D5; /* Beige logo */
     line-height: 1;
 }
 
@@ -45,7 +45,7 @@
 
 .nav-links a {
     font-family: 'Poppins', sans-serif;
-    color: #003049; /* Dark Navy */
+    color: #003049; /* Dark navy */
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 50px;
@@ -54,33 +54,35 @@
 
 .nav-links a:hover {
     background-color: #669BBC;
-    color: #FDF0D5;
+    color: #FDF0D5; /* Beige text */
 }
 
 .nav-links a.active {
-    background-color: #C1121F;
-    color: #FDF0D5;
-    padding: 10px 20px;
-    border-radius: 50px;
+    background-color: transparent; /* No background for active item in the scrolled navbar */
+    color: #FDF0D5; /* Red text for the active item */
 }
 
 /* Scrolled Navbar Styles */
 .navbar.scrolled {
-    background-color: #669BBC; /* Matches Testimonials Section */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow when scrolled */
+    background-color: #FDF0D5; /* Beige on scroll */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .navbar.scrolled .logo {
-    color: #FDF0D5; /* Matches the background color */
+    color: #780000; /* Dark red logo on scroll */
 }
 
 .navbar.scrolled .nav-links a {
-    color: #FDF0D5; /* Matches the background color */
+    color: #780000; /* Dark red links when scrolled */
 }
 
 .navbar.scrolled .nav-links a:hover {
-    background-color: #C1121F;
-    color: #FDF0D5;
+    color: #C1121F; /* Bright red hover */
+    background-color: transparent; /* No background on hover */
+}
+.navbar.scrolled .nav-links a.active {
+    color: #C1121F; /* Bright red hover */
+    background-color: transparent; /* No background on hover */
 }
 
 /* Hamburger Menu Styling */
@@ -94,13 +96,13 @@
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #780000;
+    background-color: #FDF0D5;
     margin: 4px 4px;
     transition: all 0.3s ease;
 }
 
 .navbar.scrolled .hamburger span {
-    background-color: #FDF0D5; /* Change burger icon to background color when scrolled */
+    background-color: #780000; /* Change burger icon to deep red when scrolled */
 }
 
 /* Adjust for mid-sized screens (tablets) */
@@ -118,19 +120,21 @@
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
     .navbar {
-        width: 90%;
+        width: 80%;
         padding: 10px 20px;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #FDF0D5;
+        background-color: #FDF0D5; /* Beige background for unscrolled hamburger dropdown */
         position: absolute;
         top: 60px;
         right: 20px;
         width: 50%;
         padding: 20px;
+        outline: auto;
+        outline-color: #669BBC; /* Blue outline when unscrolled */
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         align-items: center;
@@ -138,31 +142,47 @@
     }
 
     .navbar.scrolled .nav-links {
-        background-color: #669BBC; /* Dropdown background matches testimonials color when scrolled */
+        background-color: #669BBC; /* Blue background when scrolled */
+        outline-color: #FDF0D5; /* Beige outline when scrolled */
     }
 
+    /* Dropdown Menu Items */
     .nav-links a {
         padding: 10px 15px;
-        border-bottom: 1px solid #C1121F;
         width: 100px;
         margin-bottom: 10px;
         text-align: center;
         border-radius: 50px;
+        background-color: #FDF0D5; /* Beige background */
+        color: #003049; /* Dark navy text */
     }
 
     .navbar.scrolled .nav-links a {
-        color: #FDF0D5; /* Dropdown items to background color when scrolled */
-    }
-
-    .nav-links a:last-child {
-        border-bottom: none;
+        background-color: #669BBC; /* Blue background when scrolled */
+        color: #FDF0D5; /* Beige text */
     }
 
     .nav-links a.active {
-        background-color: #C1121F;
+        background-color: #669BBC; /* Blue background for active link */
+        color: #FDF0D5; /* Beige text */
         padding: 10px 20px;
         border-radius: 50px;
         width: 100px;
+    }
+
+    .navbar.scrolled .nav-links a.active {
+        background-color: #FDF0D5; /* Beige background for active item when scrolled */
+        color: #003049; /* Dark navy text */
+    }
+
+    .nav-links a:hover {
+        background-color: #669BBC; /* Beige on hover for dropdown */
+        color: #FDF0D5; /* Dark navy text on hover */
+    }
+
+    .navbar.scrolled .nav-links a:hover {
+        background-color: #FDF0D5; /* Beige on hover in scrolled state */
+        color: #669BBC; /* Blue text when hovered in scrolled state */
     }
 
     .hamburger {
