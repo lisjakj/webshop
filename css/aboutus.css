@@ -1,0 +1,122 @@
+.about-hero {
+    background-color: #fdf0d5; /* Beige */
+    text-align: center;
+    padding: 2rem 0; /* Adjusted padding to reduce height */
+    position: relative;
+    min-height: 300px; /* Ensures section is tall enough */
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 2rem; /* Moves content closer to the wave separator */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem; /* Adjusted font size */
+    color: #003049; /* Dark blue */
+}
+
+.hero-content p {
+    font-family: "Poppins", sans-serif; /* Changed to sans-serif Poppins */
+    font-size: 1.5rem; /* Adjusted font size */
+    color: #003049;
+}
+
+.wave-separator {
+    height: auto;
+    margin-top: -5px; /* Slight overlap to avoid white gap */
+}
+
+.our-story-section {
+    background-color: #669bbc; /* Light blue */
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.story-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fdf0d5; /* Beige box */
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-container h2,
+.story-container h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem; /* Increased font size */
+    color: #003049; /* Dark blue */
+    margin-bottom: 1rem;
+}
+
+.story-container p {
+    font-family: "Poppins", sans-serif; /* Changed to sans-serif Poppins */
+    font-size: 1.3rem; /* Increased font size */
+    color: #003049;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Scroll Fade-in Animations for Elements */
+.fade-in-left,
+.fade-in-right,
+.fade-in-up {
+    opacity: 0;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in-left {
+    transform: translateX(-100px); /* Start position for left animations */
+}
+
+.fade-in-right {
+    transform: translateX(100px); /* Start position for right animations */
+}
+
+.fade-in-up {
+    transform: translateY(100px); /* Start position for upward animations */
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateX(0) translateY(0); /* Move to original position when in view */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .story-container {
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Increased for better visibility */
+    }
+
+    .story-container h2 {
+        font-size: 2.4rem; /* Increased font size */
+    }
+
+    .story-container p {
+        font-size: 1.2rem; /* Increased font size */
+    }
+    .about-hero{
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Increased for better readability */
+    }
+
+    .story-container p {
+        font-size: 1.1rem; /* Increased for better readability */
+    }
+    .about-hero{
+        padding-top: 5rem;
+    }
+}

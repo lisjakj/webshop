@@ -1,0 +1,48 @@
+.sale-popup {
+    position: fixed;
+    bottom: 20px; /* Adjust to position a little above the bottom of the screen */
+    left: 20px; /* Adjust to keep it slightly inside the left side */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border: 2px solid #C1121F; /* Black border */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    z-index: 9999;
+    border-radius: 10px;
+    max-width: 250px; /* Limits the width to avoid blocking too much content */
+}
+
+.countdown-timer {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #C1121F; /* Red for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sale-popup {
+        font-size: 0.9rem;
+        bottom: 15px;
+        left: 15px;
+        max-width: 200px; /* Reduce max width for smaller screens */
+    }
+
+    .countdown-timer {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-popup {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .countdown-timer {
+        font-size: 0.9rem;
+    }
+}

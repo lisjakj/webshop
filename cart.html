@@ -1,0 +1,164 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heartistry - Your Cart</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/perks-detail.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/waves.css">
+    <link rel="stylesheet" href="css/sale-popup.css" />
+    <script src="js/sale-popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="js/navbar.js" defer></script>
+    <script src="js/cart.js" defer></script>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+          <a href="index.html" class="logo-link">
+            <div class="logo">
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="#C1121F"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+                               4.42 3 7.5 3c1.74 0 3.41 0.81 
+                               4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
+                               5.42 22 8.5c0 3.78-3.4 6.86-8.55 
+                               11.54L12 21.35z"
+                />
+              </svg>
+              Heartistry
+            </div>
+          </a>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="necklaces.html">Necklaces</a>
+            <a href="bracelets.html">Bracelets</a>
+            <a href="cart.html" class="active">Cart</a>
+            <a href="aboutus.html">About Us</a>
+          </div>
+          <div class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+    <!-- Sale Pop-up Banner -->
+    <div class="sale-popup">
+        <p>Sale ending in <span id="countdown" class="countdown-timer"></span></p>
+      </div>
+    <!-- Category Hero Section -->
+    <section class="category-hero">
+        <div class="hero-content">
+          <h1>Your Cart</h1>
+          <!-- Users Checking Out -->
+          <div id="users-checking-out" class="users-checking-out"></div> <!-- Added div for users checking out -->
+        
+        </div>
+        
+      </section>
+  
+      <!-- Wave Separator under Hero -->
+      <svg
+      id="wave-bottom"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="wave-separator"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="#FDF0D5"
+          fill-opacity="1"
+          d="M0,32L40,53.3C80,75,160,117,240,117.3C320,117,400,75,480,85.3C560,96,640,160,720,165.3C800,171,880,117,960,85.3C1040,53,1120,43,1200,48C1280,53,1360,75,1400,85.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+        ></path>
+      </svg>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="cart-container">
+          <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically injected here -->
+          </div>
+      
+          <div class="cart-total">
+            <h3>Before Discount: <span id="total-before-discount">$0.00</span></h3>
+            <h3 id="coupon-discount-line" style="display: none;">Coupon: <span id="coupon-discount-amount">-$0.00</span></h3>
+            <h3>Discount: <span id="total-discount-amount">$0.00</span></h3>
+            <h3>Total: <span id="cart-total">$0.00</span></h3>
+        
+            
+            <!-- Coupon Code Area -->
+            <div class="coupon-container">
+                <input type="text" id="coupon-code" placeholder="Enter coupon code" />
+                <button class="btn apply-coupon">Apply Coupon</button>
+            </div>
+        
+            <button class="btn checkout-btn">Checkout</button>
+            <button class="btn clear-cart">Clear</button>
+
+            <!-- Perks Section with Top and Bottom Waves -->
+    <section id="perks" class="perks-section">
+        <!-- Top Wave -->
+        
+  
+        <div class="perks-row">
+            <div class="perk">
+              <img src="images/premium.png" alt="Premium Quality" />
+            </div>
+            <div class="perk">
+              <img src="images/30-days.png" alt="30-Day Money Back" />
+            </div>
+            <div class="perk">
+              <img src="images/courier-services.png" alt="Express Shipping" />
+            </div>
+            <div class="perk">
+              <img src="images/24-hours-support (1).png" alt="24-Hour Support" />
+            </div>
+          </div>
+  
+        <!-- Bottom Wave -->
+        
+      </section>
+            
+        </div>
+        </div>
+      </section>
+
+     
+    
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Heartistry. All rights reserved.</p>
+    <p>
+        Follow us: 
+        <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+      </p>
+    <p>
+      <a href="contact.html" class="footer-link">Contact Us</a> | 
+      <a href="help.html" class="footer-link">Help & FAQs</a> | 
+      <a href="shipping.html" class="footer-link">Shipping Information</a> | 
+      <a href="terms.html" class="footer-link">Terms & Conditions</a>
+    </p>
+    
+  </footer>
+  </body>
+</html>

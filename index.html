@@ -11,99 +11,140 @@
     <link rel="stylesheet" href="css/testimonials.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/perks.css" />
+    <link rel="stylesheet" href="css/waves.css">
+    <link rel="stylesheet" href="css/sale-popup.css" />
+    <script src="js/sale-popup.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="js/navbar.js" defer></script>
-    <script src="js/hero-carousel.js" defer></script>
     <script src="js/products.js" defer></script>
   </head>
   <body>
     <!-- Header and Navigation -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <svg
-            class="heart-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="#C1121F"
-          >
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+        <a href="index.html" class="logo-link">
+          <div class="logo">
+            <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#C1121F"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
                              4.42 3 7.5 3c1.74 0 3.41 0.81 
                              4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
                              5.42 22 8.5c0 3.78-3.4 6.86-8.55 
                              11.54L12 21.35z"
-            />
-          </svg>
-          Heartistry
-        </div>
+              />
+            </svg>
+            Heartistry
+          </div>
+        </a>
         <div class="nav-links">
           <a href="index.html" class="active">Home</a>
           <a href="necklaces.html">Necklaces</a>
           <a href="bracelets.html">Bracelets</a>
-          <a href="#about">Cart</a>
-          <a href="#contact">F.A.Q</a>
+          <a href="cart.html">Cart</a>
+          <a href="aboutus.html">About Us</a>
         </div>
-        <div
-          class="hamburger"
-          aria-expanded="false"
-          aria-label="Toggle navigation menu"
-        >
+        <div class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </nav>
     </header>
-
-    <!-- Hero Section -->
-    <!-- Hero Section (Carousel) -->
-    <section class="hero-carousel" id="home">
-      <div class="carousel">
-        <div class="carousel-track">
-          <!-- Slide 1 -->
-          <div class="carousel-slide">
-            <img src="images/1.png" alt="Celebrate Love with Heartistry" />
-            <div class="carousel-content">
-              <h2>Celebrate Love with Heartistry</h2>
-              <p>
-                Discover exclusive, handcrafted gifts designed to cherish every
-                moment.
-              </p>
-              <a href="#featured-products" class="btn">Shop Now</a>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="carousel-slide">
-            <img src="images/3.png" alt="Explore Our Premium Gifts" />
-            <div class="carousel-content">
-              <h2>Explore Our Premium Gifts</h2>
-              <p>Unique, personalized gifts for every special occasion.</p>
-              <a href="#featured-products" class="btn">Shop Now</a>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="carousel-slide">
-            <img src="images/4.jpg" alt="Handcrafted Gifts for Couples" />
-            <div class="carousel-content">
-              <h2>Handcrafted Gifts for Couples</h2>
-              <p>Make every moment memorable with our exquisite selection.</p>
-              <a href="#featured-products" class="btn">Shop Now</a>
-            </div>
-          </div>
+    <!-- Sale Pop-up Banner -->
+    <div class="sale-popup">
+      <p>Sale ending in <span id="countdown" class="countdown-timer"></span></p>
+    </div>
+    <!-- Updated Hero Section -->
+    <section class="hero-split" id="home">
+      <div class="hero-left">
+        <div class="hero-content">
+          <h2>
+            Create Love with <br />
+            <span class="heartistry-logo">
+              <svg
+                class="heart-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="#C1121F"
+                style="vertical-align: middle; margin-right: 10px"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+                                      4.42 3 7.5 3c1.74 0 3.41 0.81 
+                                      4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
+                                      5.42 22 8.5c0 3.78-3.4 6.86-8.55 
+                                      11.54L12 21.35z"
+                />
+              </svg>
+              Heartistry
+            </span>
+          </h2>
+          <p>
+            Discover exclusive, handcrafted gifts designed to cherish every
+            moment.
+          </p>
+          <a href="#featured-products" class="btn">Shop Now</a>
         </div>
-        <!-- Carousel Controls (Arrows and Dots) -->
-        <div class="carousel-controls">
-          <button class="arrow arrow-prev">&#10094;</button>
-          <!-- Left Arrow -->
-          <div class="carousel-indicators">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
+      </div>
+      <div class="hero-right">
+        <div class="image-columns">
+          <!-- Column 1 - Moving down -->
+          <div class="image-column move-down">
+            <img src="images/1.png" alt="Product 1" />
+            <img src="images/3.png" alt="Product 2" />
+            <img src="images/4.jpg" alt="Product 3" />
+            <img src="images/9.jpg" alt="Product 4" />
+            <img src="images/1.png" alt="Product 5" />
+            <img src="images/3.png" alt="Product 6" />
+            <!-- Duplicate set for continuous loop -->
+            <img src="images/1.png" alt="Product 1" />
+            <img src="images/3.png" alt="Product 2" />
+            <img src="images/4.jpg" alt="Product 3" />
+            <img src="images/9.jpg" alt="Product 4" />
+            <img src="images/1.png" alt="Product 5" />
+            <img src="images/3.png" alt="Product 6" />
           </div>
-          <button class="arrow arrow-next">&#10095;</button>
-          <!-- Right Arrow -->
+          <!-- Column 2 - Moving up -->
+          <div class="image-column move-up">
+            <img src="images/9.jpg" alt="Product 4" />
+            <img src="images/1.png" alt="Product 5" />
+            <img src="images/3.png" alt="Product 6" />
+            <img src="images/4.jpg" alt="Product 7" />
+            <img src="images/9.jpg" alt="Product 8" />
+            <img src="images/1.png" alt="Product 9" />
+            <!-- Duplicate set for continuous loop -->
+            <img src="images/9.jpg" alt="Product 4" />
+            <img src="images/1.png" alt="Product 5" />
+            <img src="images/3.png" alt="Product 6" />
+            <img src="images/4.jpg" alt="Product 7" />
+            <img src="images/9.jpg" alt="Product 8" />
+            <img src="images/1.png" alt="Product 9" />
+          </div>
+          <!-- Column 3 - Moving down -->
+          <div class="image-column move-down">
+            <img src="images/4.jpg" alt="Product 7" />
+            <img src="images/9.jpg" alt="Product 8" />
+            <img src="images/1.png" alt="Product 9" />
+            <img src="images/1.png" alt="Product 1" />
+            <img src="images/3.png" alt="Product 2" />
+            <img src="images/4.jpg" alt="Product 3" />
+            <!-- Duplicate set for continuous loop -->
+            <img src="images/4.jpg" alt="Product 7" />
+            <img src="images/9.jpg" alt="Product 8" />
+            <img src="images/1.png" alt="Product 9" />
+            <img src="images/1.png" alt="Product 1" />
+            <img src="images/3.png" alt="Product 2" />
+            <img src="images/4.jpg" alt="Product 3" />
+          </div>
         </div>
       </div>
     </section>
@@ -122,6 +163,7 @@
 
     <!-- Wave Separator -->
     <svg
+      id="wave-bottom"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
       perserveAspectRatio="none"
@@ -133,8 +175,6 @@
       ></path>
     </svg>
 
-    <!-- Featured Products Section -->
-    <!-- Featured Products Section -->
     <section id="featured-products" class="featured-products">
       <h2>Our Premium Selection</h2>
       <div class="products-container">
@@ -143,6 +183,11 @@
             <img src="images/1.png" alt="Skyline Projector" />
             <h3>Skyline Projector</h3>
             <p>Create a calming skyline right in your room.</p>
+            <p class="product-link" style="display: none;">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to Cart</button>
           </div>
         </a>
@@ -151,6 +196,11 @@
             <img src="images/3.png" alt="LED Mood Lights" />
             <h3>LED Mood Lights</h3>
             <p>Set the perfect ambiance with smart lighting.</p>
+            <p class="product-link" style="display: none;">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to Cart</button>
           </div>
         </a>
@@ -159,6 +209,11 @@
             <img src="images/9.jpg" alt="Bluetooth Speaker" />
             <h3>Bluetooth Speaker</h3>
             <p>Enjoy high-quality sound to complement your space.</p>
+            <p class="product-link" style="display: none;">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to Cart</button>
           </div>
         </a>
@@ -167,6 +222,11 @@
             <img src="images/4.jpg" alt="Couples' Journal" />
             <h3>Couples' Journal</h3>
             <p>Record your memories and milestones together.</p>
+            <p class="product-link" style="display: none;">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to Cart</button>
           </div>
         </a>
@@ -175,6 +235,11 @@
             <img src="images/3.png" alt="Personalized Mugs" />
             <h3>Personalized Mugs</h3>
             <p>Custom designs for a perfect morning.</p>
+            <p class="product-link" style="display: none;">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to Cart</button>
           </div>
         </a>
@@ -183,6 +248,11 @@
             <img src="images/1.png" alt="Romantic Candle Set" />
             <h3>Romantic Candle Set</h3>
             <p>Create the perfect ambiance for your evenings.</p>
+            <p class="product-link" style="display: none;">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to Cart</button>
           </div>
         </a>
@@ -194,6 +264,7 @@
       <!-- Top Wave -->
       <div class="wave-top">
         <svg
+        id="wave-top"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
@@ -209,25 +280,25 @@
       <div class="perks-container">
         <div class="perk">
           <div class="perk-icon">
-            <img src="images/high-quality.png" alt="Quality" />
+            <img src="images/premium.png" alt="Quality" />
           </div>
           <p>Premium Quality</p>
         </div>
         <div class="perk">
           <div class="perk-icon">
-            <img src="images/cashback.png" alt="Money Back" />
+            <img src="images/30-days.png" alt="Money Back" />
           </div>
-          <p>30-Day Money Back Guarantee</p>
+          <p>30-Day Money Back</p>
         </div>
         <div class="perk">
           <div class="perk-icon">
-            <img src="images/shopping-cart.png" alt="Express delivery" />
+            <img src="images/courier-services.png" alt="Express delivery" />
           </div>
           <p>Express Shipping</p>
         </div>
         <div class="perk">
           <div class="perk-icon">
-            <img src="images/24-hours-support.png" alt="24 Hour Support" />
+            <img src="images/24-hours-support (1).png" alt="24 Hour Support" />
           </div>
           <p>24-Hour Support</p>
         </div>
@@ -236,6 +307,7 @@
       <!-- Bottom Wave -->
       <div class="wave-bottom">
         <svg
+        id="wave-bottom"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
@@ -355,9 +427,30 @@
       </div>
     </section>
 
+    <!-- Sticky Cart Icon -->
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cart-count">0</div>
+    </div>
+    <div class="item-added-popup" style="border: solid; color: #fdf0d5;">
+      <p>Item added to cart</p>
+    </div>
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2024 Heartistry. All rights reserved.</p>
+      <p>
+          Follow us: 
+          <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+        </p>
+      <p>
+        <a href="contact.html" class="footer-link">Contact Us</a> | 
+        <a href="help.html" class="footer-link">Help & FAQs</a> | 
+        <a href="shipping.html" class="footer-link">Shipping Information</a> | 
+        <a href="terms.html" class="footer-link">Terms & Conditions</a>
+      </p>
+      
     </footer>
   </body>
 </html>

@@ -1,143 +1,201 @@
-/* Hero Carousel */
-.hero-carousel {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Full height */
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    height: 100%;
-    transition: transform 0.6s ease-in-out; /* Smooth scroll transition */
-}
-
-.carousel-track {
+/* Hero Split Section */
+.hero-split {
     display: flex;
     width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
+    height: 80vh;
+}
+.heart-icon {
+    vertical-align: middle; /* Aligns the icon with the text */
+    margin-right: 5px; /* Adds space between the icon and the word "Heartistry" */
 }
 
-.carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex; /* Show all slides by default */
+/* Ensure alignment of Heartistry with the heart icon */
+.heartistry-logo {
+    display: inline-flex;
     align-items: center;
+}
+
+/* Add optional margin to create spacing between the two lines */
+h2 {
+    line-height: 1.5; /* Adjusts the space between the lines */
+}
+
+.hero-left {
+    width: 50%;
+    background-color: #FDF0D5; /* Beige */
+    display: flex;
     justify-content: center;
-}
-
-.carousel-slide img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FDF0D5;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.carousel-content {
-    position: relative;
-    z-index: 2;
+    align-items: center;
     text-align: center;
-    color: #FDF0D5;
 }
 
-.carousel-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin: 0;
-    color: #FDF0D5; /* Beige text */
-    -webkit-text-stroke: 2px #669BBC; /* Blue outline */
-    text-stroke: 2px #669BBC;
+.hero-content h2 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3rem;
+    color: #003049; /* Dark blue */
 }
 
-.carousel-content p {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    margin: 1.5rem 0;
-    color: #FDF0D5; /* Beige text */
-    -webkit-text-stroke: 1px #669BBC; /* Blue outline */
-    text-stroke: 1px #669BBC;
+.hero-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #C1121F; /* Red */
+    margin-top: 1rem;
+    margin-bottom: 6rem;
 }
 
-.carousel-content .btn {
+.hero-content .btn {
     background-color: #C1121F;
     color: #FDF0D5;
     padding: 0.75rem 2rem;
     border-radius: 50px;
+    margin-top: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.carousel-content .btn:hover {
+.hero-content .btn:hover {
     background-color: #780000;
 }
 
-/* Carousel Controls */
-.carousel-controls {
-    position: absolute;
-    bottom: 20px;
+.hero-right {
+    width: 50%;
+    background-color: #669BBC; /* Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+
+.image-columns {
+    display: flex;
+    justify-content: space-around; /* Distribute columns evenly */
+    align-items: center;
+    height: 100%;
     width: 100%;
+    gap: 1.5rem; /* Adds space between the columns */
+}
+
+/* Each Column */
+.image-column {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px; /* Space between the arrows and dots */
-    z-index: 3;
+    flex-direction: column;
+    gap: 1.5rem; /* Ensure space between images */
+    position: relative;
+    height: calc(100% * 3); /* Adjust height to accommodate smooth scrolling of three sets of images */
+    animation: none; /* Static start */
 }
 
-/* Dots centered, arrows on the sides */
-.carousel-indicators {
-    display: flex;
-    gap: 10px;
+.image-column img {
+    width: clamp(140px, 13vw, 180px); /* Adjusted for better scaling */
+    height: clamp(140px, 13vw, 180px); /* Adjusted for better scaling */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-indicators .dot {
-    width: 12px;
-    height: 12px;
-    background-color: #FDF0D5;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Duplicate images to create seamless loop */
+.image-column img + img {
+    margin-top: 1.5rem; /* Space between sets */
 }
 
-.carousel-indicators .dot.active {
-    background-color: #C1121F; /* Active dot in red */
+/* Animations */
+.move-up, .move-down {
+    animation: none; /* Static start */
 }
 
-/* Carousel Arrows */
-.arrow {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #FDF0D5;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 3;
-    transition: background-color 0.3s ease;
+/* Define the animations */
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(33.33%); /* Move down by a third to create the seamless loop */
+    }
 }
 
-.arrow-prev, .arrow-next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-33.33%); /* Move up by a third to create the seamless loop */
+    }
 }
 
-.arrow-prev {
-    margin-right: 30px; /* Ensure space between arrow and dots */
+/* Activate animations after a 2-second delay */
+.hero-right .move-up {
+    animation: moveUp 30s linear infinite 2s; /* Slow upward movement after delay */
 }
 
-.arrow-next {
-    margin-left: 30px; /* Ensure space between arrow and dots */
+.hero-right .move-down {
+    animation: moveDown 30s linear infinite 2s; /* Slow downward movement after delay */
 }
 
-.arrow:hover {
-    background-color: #C1121F; /* Background turns red on hover */
-    color: #FDF0D5; /* Keep the arrow icon white on hover */
+/* Responsive Styling */
+@media (max-width: 1200px) {
+    .image-columns {
+        gap: 1.5rem; /* Slightly smaller gap on medium screens */
+        padding: 0 1.5rem; /* Reduced padding */
+    }
 
+    .image-column img {
+        width: clamp(120px, 11vw, 160px);
+        height: clamp(120px, 11vw, 160px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 4rem;
+    }
+
+    .image-columns {
+        gap: 1.5rem; /* Maintain gap on smaller screens */
+    }
+
+    .image-column img {
+        width: clamp(100px, 9vw, 140px);
+        height: clamp(100px, 9vw, 140px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .image-columns {
+        gap: 1rem; /* Smaller gap for very small screens */
+        padding: 0 0.5rem; /* Further reduce padding */
+    }
+
+    .image-column img {
+        width: clamp(80px, 7vw, 120px);
+        height: clamp(80px, 7vw, 120px);
+    }
 }

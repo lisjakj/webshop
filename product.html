@@ -4,52 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heartistry - Product Detail</title>
-    <link rel="stylesheet" href="css/global.css" />
+    
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/product-detail.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/waves.css">
+    <link rel="stylesheet" href="css/sale-popup.css" />
+    <script src="js/sale-popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="js/navbar.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/product-page.js"></script>
   </head>
   <body>
     <!-- Header and Navigation -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <svg
-            class="heart-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="#C1121F"
-          >
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-            />
-          </svg>
-          Heartistry
-        </div>
+        <a href="index.html" class="logo-link">
+          <div class="logo">
+            <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#C1121F"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+                             4.42 3 7.5 3c1.74 0 3.41 0.81 
+                             4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
+                             5.42 22 8.5c0 3.78-3.4 6.86-8.55 
+                             11.54L12 21.35z"
+              />
+            </svg>
+            Heartistry
+          </div>
+        </a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="necklaces.html">Necklaces</a>
           <a href="bracelets.html">Bracelets</a>
           <a href="cart.html">Cart</a>
-          <a href="faq.html">F.A.Q</a>
+          <a href="aboutus.html">About Us</a>
         </div>
-        <div
-          class="hamburger"
-          aria-expanded="false"
-          aria-label="Toggle navigation menu"
-        >
+        <div class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </nav>
     </header>
-
+    <!-- Sale Pop-up Banner -->
+    <div class="sale-popup">
+      <p>Sale ending in <span id="countdown" class="countdown-timer"></span></p>
+    </div>
     <!-- Product Detail Hero Section -->
     <section class="product-hero">
       <div class="hero-content">
@@ -59,7 +74,7 @@
     </section>
 
     <!-- First Wave Separator: Beige to Blue -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
       <path
         fill="#FDF0D5"
         fill-opacity="1"
@@ -67,27 +82,55 @@
       ></path>
     </svg>
 
-    <!-- Product Detail Section -->
     <section class="product-detail">
       <div class="product-detail-container">
         <div class="product-image">
           <img src="images/4.jpg" alt="Elegant Necklace" />
         </div>
+    
         <div class="product-info">
           <h2>Elegant Necklace</h2>
           <p>
-            This beautifully handcrafted necklace is a symbol of love, elegance,
-            and sophistication. It is made from the finest materials and
-            features a stunning design that will complement any outfit.
+            This beautifully handcrafted necklace is a symbol of love, elegance, and sophistication. It is made from the finest materials and features a stunning design that will complement any outfit.
           </p>
-          <p class="price">$129.99</p>
-          <button class="btn">Add to Cart</button>
+          <p class="product-link" style="display: none;">product.html</p>
+          <div class="price">
+            $129.99
+            <span class="original-price">$149.99</span>
+          </div>
+          <button id="add-to-cart" class="btn">Add to Cart</button>
+    
+          <!-- Stats Bars -->
+          <div class="stats-bar">
+            <div class="stat-box">
+              <p><span id="people-bought">12</span> buyers in last 24 hours</p>
+            </div>
+            <div class="stat-box">
+              <p><span id="people-browsing">15</span> people here right now</p>
+            </div>
+          </div>
+    
+          <!-- Circular Perks Row below the Stats Bars -->
+          <div class="perks-row">
+            <div class="perk">
+              <img src="images/premium.png" alt="Premium Quality" />
+            </div>
+            <div class="perk">
+              <img src="images/30-days.png" alt="30-Day Money Back" />
+            </div>
+            <div class="perk">
+              <img src="images/courier-services.png" alt="Express Shipping" />
+            </div>
+            <div class="perk">
+              <img src="images/24-hours-support (1).png" alt="24-Hour Support" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Second Wave Separator: Blue to Beige -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg id="wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
       <path
         fill="#FDF0D5"
         fill-opacity="1"
@@ -108,7 +151,7 @@
     </section>
 
     <!-- Third Wave Separator: Beige to Blue -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg id="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
       <path
         fill="#FDF0D5"
         fill-opacity="1"
@@ -116,9 +159,30 @@
       ></path>
     </svg>
 
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cart-count">0</div>
+    </div>
+    <div class="item-added-popup" style="border: solid; color: #fdf0d5;">
+      <p>Item added to cart</p>
+    </div>
+
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2024 Heartistry. All rights reserved.</p>
+      <p>
+          Follow us: 
+          <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+        </p>
+      <p>
+        <a href="contact.html" class="footer-link">Contact Us</a> | 
+        <a href="help.html" class="footer-link">Help & FAQs</a> | 
+        <a href="shipping.html" class="footer-link">Shipping Information</a> | 
+        <a href="terms.html" class="footer-link">Terms & Conditions</a>
+      </p>
+      
     </footer>
   </body>
 </html>

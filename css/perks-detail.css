@@ -1,0 +1,75 @@
+/* Circular Perks Row - Always centered with space on each side */
+.perks-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #669bbc; /* Blue background */
+    padding: 1rem;
+    margin: 2rem auto; /* Center horizontally with margin on top */
+    width: 80%; /* Adjust the width to give some space on each side */
+    max-width: 900px; /* Maximum width to prevent it from being too wide */
+    border-radius: 50px; /* Circular background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Individual Perk Icon */
+.perk img {
+    width: 40px; /* Adjust size for the icons */
+    height: 40px;
+    outline: none;
+    border: none;
+}
+
+/* Perk Container */
+.perk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ensure each icon fits within its own space */
+    height: 50px;
+    border-radius: 50%; /* Circular container */
+    background-color: #fdf0d5; /* White background for the perks */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow for icons */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Perks */
+.perk:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive for Medium Screens */
+@media (max-width: 768px) {
+    .perks-row {
+        width: 90%; /* Slightly larger width for medium screens */
+        padding: 0.75rem;
+    }
+
+    .perk {
+        width: 40px;
+        height: 40px;
+    }
+
+    .perk img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Responsive for Small Screens */
+@media (max-width: 480px) {
+    .perks-row {
+        width: 95%; /* Almost full width, but with some space on each side */
+        padding: 0.5rem;
+    }
+
+    .perk {
+        width: 35px;
+        height: 35px;
+    }
+
+    .perk img {
+        width: 30px;
+        height: 30px;
+    }
+}

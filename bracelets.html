@@ -9,40 +9,49 @@
     <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/waves.css" />
+    <link rel="stylesheet" href="css/sale-popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="js/navbar.js" defer></script>
     <script src="js/category.js" defer></script>
+    <script src="js/sale-popup.js"></script>
   </head>
   <body>
     <!-- Header and Navigation -->
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <svg
-            class="heart-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="#C1121F"
-          >
-            <path
-              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-            />
-          </svg>
-          Heartistry
-        </div>
+        <a href="index.html" class="logo-link">
+          <div class="logo">
+            <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#C1121F"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+                             4.42 3 7.5 3c1.74 0 3.41 0.81 
+                             4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 
+                             5.42 22 8.5c0 3.78-3.4 6.86-8.55 
+                             11.54L12 21.35z"
+              />
+            </svg>
+            Heartistry
+          </div>
+        </a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="necklaces.html">Necklaces</a>
           <a href="bracelets.html" class="active">Bracelets</a>
           <a href="cart.html">Cart</a>
-          <a href="faq.html">F.A.Q</a>
+          <a href="aboutus.html">About Us</a>
         </div>
-        <div
-          class="hamburger"
-          aria-expanded="false"
-          aria-label="Toggle navigation menu"
-        >
+        <div class="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
@@ -50,16 +59,24 @@
       </nav>
     </header>
 
+    <!-- Sale Pop-up Banner -->
+    <div class="sale-popup">
+      <p>Sale ending in <span id="countdown" class="countdown-timer"></span></p>
+    </div>
+
     <!-- Category Hero Section -->
     <section class="category-hero">
       <div class="hero-content">
         <h1>Our Bracelet Collection</h1>
-        <p>Discover timeless bracelets designed to add elegance to any occasion.</p>
+        <p>
+          Discover timeless bracelets designed to add elegance to any occasion.
+        </p>
       </div>
     </section>
 
     <!-- Wave Separator under Hero -->
     <svg
+      id="wave-bottom"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
       class="wave-separator"
@@ -82,6 +99,11 @@
             <img src="images/1.png" alt="Skyline Bracelet" />
             <h3>Skyline Bracelet</h3>
             <p>Handcrafted bracelet that brings elegance to any wrist.</p>
+            <p class="product-link" style="display: none">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to cart</button>
           </div>
         </a>
@@ -92,6 +114,11 @@
             <img src="images/3.png" alt="Moonstone Bracelet" />
             <h3>Moonstone Bracelet</h3>
             <p>A captivating moonstone bracelet with silver accents.</p>
+            <p class="product-link" style="display: none">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to cart</button>
           </div>
         </a>
@@ -102,6 +129,11 @@
             <img src="images/9.jpg" alt="Heart Charm Bracelet" />
             <h3>Heart Charm Bracelet</h3>
             <p>Carry love with you wherever you go with this heart charm.</p>
+            <p class="product-link" style="display: none">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to cart</button>
           </div>
         </a>
@@ -111,7 +143,14 @@
           <div class="product">
             <img src="images/4.jpg" alt="Infinity Bracelet" />
             <h3>Infinity Bracelet</h3>
-            <p>A symbol of endless love and infinite beauty in bracelet form.</p>
+            <p>
+              A symbol of endless love and infinite beauty in bracelet form.
+            </p>
+            <p class="product-link" style="display: none">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to cart</button>
           </div>
         </a>
@@ -122,6 +161,11 @@
             <img src="images/3.png" alt="Diamond Bracelet" />
             <h3>Diamond Bracelet</h3>
             <p>Radiate elegance with this stunning diamond bracelet.</p>
+            <p class="product-link" style="display: none">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to cart</button>
           </div>
         </a>
@@ -132,15 +176,46 @@
             <img src="images/1.png" alt="Custom Name Bracelet" />
             <h3>Custom Name Bracelet</h3>
             <p>Personalized bracelet with your name or message.</p>
+            <p class="product-link" style="display: none">product.html</p>
+            <p class="price">
+              <span class="sale-price">$19.99</span>
+              <span class="original-price">$24.99</span>
+            </p>
             <button class="btn">Add to cart</button>
           </div>
         </a>
       </div>
     </section>
 
+    <!-- Sticky Cart Icon -->
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cart-count">0</div>
+    </div>
+    <div class="item-added-popup" style="border: solid; color: #fdf0d5;">
+      <p>Item added to cart</p>
+    </div>
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2024 Heartistry. All rights reserved.</p>
+      <p>
+        Follow us:
+        <a href="https://www.instagram.com" class="social-link"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.facebook.com" class="social-link"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://www.twitter.com" class="social-link"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </p>
+      <p>
+        <a href="contact.html" class="footer-link">Contact Us</a> |
+        <a href="help.html" class="footer-link">Help & FAQs</a> |
+        <a href="shipping.html" class="footer-link">Shipping Information</a> |
+        <a href="terms.html" class="footer-link">Terms & Conditions</a>
+      </p>
     </footer>
   </body>
 </html>

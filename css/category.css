@@ -3,6 +3,9 @@
     background-color: #FDF0D5; /* Beige */
     padding: 4rem 2rem;
     text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .category-hero h1 {
@@ -22,9 +25,10 @@
 /* Wave Separator */
 .wave-separator {
     position: relative;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     line-height: 0;
+    margin: -10px;
     height: 100px; /* Limit the height of the wave */
 }
 
@@ -35,8 +39,24 @@
     height: 100px; /* Set a fixed height to prevent excessive vertical growth */
     max-height: 120px; /* Optional: Set a max height */
     background-color: transparent;
+    margin: -10px;
     transform: translateY(1px); /* Small adjustment to remove any gap */
 }
+
+/* Styles for Users Checking Out circular blue rectangle */
+.users-checking-out {
+    background-color: #003049; /* Blue background */
+    color: #fdf0d5; /* Light beige text */
+    padding: 10px 20px;
+    border-radius: 50px; /* Circular rectangle */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 2rem;
+}
+
 
 /* Responsive Design for Larger Screens */
 @media (min-width: 1024px) {
@@ -51,6 +71,7 @@
     .wave-separator svg {
         height: 80px; /* Keep the wave's height consistent on larger screens */
     }
+    
 }
 
 /* Responsive Design for Small Screens */
@@ -65,5 +86,9 @@
 
     .wave-separator svg {
         height: 60px; /* Match the wave's height on small screens */
+    }
+    .users-checking-out{
+        padding: 7px 15px;
+        font-size: 0.9rem;
     }
 }

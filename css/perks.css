@@ -10,7 +10,6 @@
 /* Top and Bottom Waves */
 .wave-top, .wave-bottom {
     position: relative;
-    width: 100%;
     overflow: hidden;
     line-height: 0;
     margin-top: -1px; /* Ensure it touches the previous section */
@@ -42,8 +41,8 @@
     background-color: #669BBC; /* Blue bubble */
     border-radius: 50%;
     padding: 1.5rem;
-    width: 120px; /* Smaller size for the perks */
-    height: 120px;
+    border: solid;
+    border-color: #003049;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add box shadow */
     color: #FDF0D5; /* Beige text */
     position: relative;
@@ -58,15 +57,20 @@
 
 /* Icon Styling */
 .perk-icon img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border-style: none;
+    background-color: #FDF0D5;
 }
 
 /* Perk Text Styling */
 .perk p {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
@@ -78,13 +82,16 @@
     }
 
     .perk {
-        width: 100px; /* Smaller perks for mobile */
+        width: 80px; /* Smaller perks for mobile */
         height: 100px;
     }
 
     .perk-icon img {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
+    }
+    .perk p {
+        font-size: 0.6rem;
     }
 
     .perk:nth-child(odd) {
@@ -95,21 +102,19 @@
 /* Responsive Design for Very Small Screens */
 @media (max-width: 480px) {
     .perks-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two items per row */
         gap: 1.5rem;
         justify-content: center;
     }
 
     .perk {
-        width: 90px;
-        height: 90px;
-        margin: 1rem auto; /* Center each perk in its column */
+        width: 80px; /* Smaller perks for mobile */
+        height: 100px;
+        font-size: 1rem;
     }
 
     .perk-icon img {
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
     }
 
     .perk:nth-child(odd), .perk:nth-child(even) {
@@ -118,7 +123,6 @@
 
     /* For an odd number of perks, center the last row */
     .perks-container > .perk:nth-last-child(1) {
-        grid-column: span 2;
         justify-self: center; /* Center the last perk if it's in its own row */
     }
 }

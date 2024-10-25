@@ -18,12 +18,13 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
-/* Logo Styling */
+/* Logo Styling 
+    font-family: 'Playfair Display', serif;*/
 .logo {
     display: flex;
     align-items: center;
-    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
     color: #FDF0D5; /* Beige logo */
     line-height: 1;

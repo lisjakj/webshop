@@ -47,20 +47,30 @@
 
 .product-info h2 {
     font-family: "Playfair Display", serif;
-    font-size: 2rem; /* Adjusted for responsiveness */
+    font-size: 2.5rem; /* Larger text */
     margin-bottom: 1rem;
 }
 
 .product-info p {
-    font-family: "Lora", serif;
-    font-size: 1rem; /* Consistent with other sections */
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem; /* Larger text */
     margin-bottom: 1.2rem;
 }
 
 .product-info .price {
-    font-size: 2.5rem; /* Consistent sizing */
+    font-size: 2.5rem; /* Larger text */
     color: #c1121f; /* Bright red */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 1.5rem;
+}
+
+.product-info .original-price {
+    font-size: 1.4rem;
+    color: #003049;
+    text-decoration: line-through;
+    margin-left: 1rem;
 }
 
 .product-info .btn {
@@ -69,12 +79,41 @@
     padding: 0.6rem 1.3rem; /* Adjust padding for responsiveness */
     border-radius: 50px;
     font-family: "Poppins", sans-serif;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    margin-top: 2rem;
 }
 
 .product-info .btn:hover {
     background-color: #780000; /* Deep Red */
+}
+
+/* Bubble Styles */
+.bubble-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.bubble {
+    background-color: #003049;
+    color: #FDF0D5;
+    border-radius: 50px;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 /* Product Features Section */
@@ -104,106 +143,181 @@
     margin-bottom: 1rem;
 }
 
-/* Wave Separator */
-.wave-separator {
-    position: relative;
+/* Stats Bar */
+.stats-bar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem; /* Add gap between the stat boxes */
+    margin-top: 2rem;
+}
+
+.stat-box {
+    background-color: #003049;
+    color: #fdf0d5;
+    padding: 0.6rem;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-wrap-mode: auto;
+}
+
+.stat-box p {
+    margin: 0;
+}
+
+#people-bought, #people-browsing {
+    font-weight: bold;
+}
+
+/* Circular Perks Row */
+.perks-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fdf0d5;
+    padding: 1rem 0;
+    margin-top: 2rem;
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    height: 80px; /* Fixed height for the wave */
-    background-color: transparent;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.wave-separator svg {
-    display: block;
-    width: 100%; /* Ensures the wave scales horizontally */
-    height: 100%; /* Ensures the wave's height stays fixed */
-    background-color: transparent;
-    transform: translateY(-1px); /* Adjust to remove any gap */
-    margin: -1px;
+/* Individual Perk Icon */
+.perk img {
+    width: 40px;
+    height: 40px;
+    border: none;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Perk Container */
+.perk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Perks */
+.perk:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Medium Screens */
 @media (max-width: 768px) {
-    .product-hero h1 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-
-    .product-hero p {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-    }
-
     .product-detail-container {
-        flex-direction: column; /* Stack content on smaller screens */
-        gap: 2rem; /* Adjust gap */
-    }
-
-    .product-image img {
-        max-width: 100%; /* Full width for smaller screens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .product-info h2 {
-        font-size: 1.8rem; /* Adjusted for responsiveness */
+        font-size: 2rem; /* Slightly smaller for medium screens */
     }
 
-    .product-info p, .product-info{
-        font-size: 1rem; /* Make text smaller on small screens */
+    .product-info p {
+        font-size: 1rem;
     }
 
     .product-info .price {
         font-size: 2rem;
     }
 
-    .product-info .btn {
-        font-size: 0.85rem; /* Adjust button size */
-        padding: 0.5rem 1rem;
-    }
-
-    .product-features h2 {
-        font-size: 1.8rem; /* Adjust for smaller screens */
-    }
-
-    .product-features li {
-        font-size: 1rem; /* Slightly smaller text */
-    }
-}
-
-/* Responsive Design for Extra Small Screens */
-@media (max-width: 480px) {
-    .product-hero h1 {
-        font-size: 1.8rem; /* Further adjustment for extra small screens */
-    }
-
-    .product-hero p {
-        font-size: 0.9rem; /* Make smaller for extra small screens */
-    }
-
-    .product-detail {
-        padding: 3rem 1rem; /* Reduce padding */
+    .product-info .original-price {
+        font-size: 1.2rem;
     }
 
     .product-image img {
-        max-width: 100%; /* Full width */
+        max-width: 300px; /* Reduce image size for medium screens */
+    }
+
+    .bubble-container {
+        flex-direction: column;
+        gap: 1rem; /* Stack bubbles vertically */
+    }
+    .stats-bar {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .stat-box {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 480px) {
+    .product-detail-container {
+        flex-direction: column;
+        gap: 1.5rem; /* More compact spacing */
     }
 
     .product-info h2 {
-        font-size: 1.6rem; /* Smaller heading */
+        font-size: 1.8rem; /* Smaller heading for small screens */
     }
 
     .product-info p {
-        font-size: 0.9rem; /* Further reduce description text */
+        font-size: 0.95rem;
+    }
+
+    .product-info .price {
+        font-size: 1.8rem;
+    }
+
+    .product-info .original-price {
+        font-size: 1rem;
     }
 
     .product-info .btn {
-        font-size: 0.8rem; /* Smaller button */
-        padding: 0.4rem 0.8rem; /* Adjust padding */
+        font-size: 1.2rem; /* Smaller button font size */
+        padding: 0.5rem 1rem; /* Adjust padding */
     }
 
-    .product-features h2 {
-        font-size: 1.6rem;
+    .product-image img {
+        max-width: 280px; /* Further reduce image size for smaller screens */
     }
 
-    .product-features li {
-        font-size: 0.9rem;
+    .bubble-container {
+        flex-direction: row;
+        gap: 1rem; /* Stack bubbles vertically */
+    }
+
+    .bubble {
+        font-size: 0.9rem; /* Slightly reduce bubble font size */
+    }
+
+    .perks-row {
+        flex-direction: row; /* Keep perks in one row */
+        padding: 0.5rem;
+        overflow-wrap: normal;
+    }
+
+    .perk {
+        width: 35px;
+        height: 35px;
+    }
+
+    .perk img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stats-bar {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .stat-box p{
+        padding: 0.2rem;
+        font-size: 0.7rem;
+        width: 120px
     }
 }

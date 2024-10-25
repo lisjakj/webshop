@@ -3,13 +3,14 @@ footer {
     background-color: #FDF0D5; /* Beige background */
     color: #003049; /* Dark Navy text */
     text-align: center;
-    padding: 2rem;
+    padding-top: 2rem;
     margin-top: 3rem; /* Extra margin to leave space for the section above */
     border-radius: 50% 50% 0 0; /* Rounded top corners for the hill effect */
     height: auto; /* Let the height adjust based on content */
-    min-height: 100px; /* Ensure a minimum height */
+    min-height: 200px; /* Ensure a minimum height */
     z-index: 1;
     overflow: hidden; /* Ensure hill is clipped properly if the content expands */
+    width: 100vw;
 }
 
 footer::before {
@@ -32,4 +33,79 @@ footer p {
 
 footer p:not(:last-child) {
     margin-bottom: 1rem; /* Add space between paragraphs if more text is added */
+}
+
+.footer-link {
+    color: #003049;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent links from wrapping */
+}
+
+.footer-link:hover {
+    color: #C1121F; /* Hover effect for footer links */
+}
+
+.social-link {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: #003049;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #C1121F; /* Hover effect for social links */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    footer {
+        padding-top: 3rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer-link {
+        display: inline-block; /* Keep links inline */
+        margin-bottom: 0.5rem;
+        white-space: nowrap; /* Prevent line breaks in links */
+    }
+
+    .social-link {
+        font-size: 1rem;
+    }
+
+
+    footer p a:last-of-type::after {
+        content: ''; /* Remove last separator */
+    }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 480px) {
+    footer {
+        padding-top: 4rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .footer-link {
+        display: inline-block; /* Keep links inline */
+        margin-bottom: 0.5rem;
+        white-space: nowrap; /* Prevent line breaks in links */
+    }
+
+    .social-link {
+        font-size: 1rem;
+    }
+
+    footer p a:last-of-type::after {
+        content: ''; /* Remove last separator */
+    }
 }

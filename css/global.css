@@ -1,9 +1,9 @@
 /* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Poppins:wght@400&display=swap');
 
-/* Global Body Styling */
+/* Global Body Styling 
+    font-family: 'Lora', serif;*/
 body {
-    font-family: 'Lora', serif;
     color: #003049; /* Dark Navy for text */
     background-color: #669BBC; /* Soft beige background #FDF0D5*/
     margin: 0;
@@ -14,6 +14,14 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+.wave-top,
+.wave-bottom {
+    width: 100vw;
+    height: auto;
+    display: block;
+    margin: -10px;
+    padding: 0;
 }
 
 /* Global Button Styling */
@@ -27,6 +35,18 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+img{
+    border-style: solid;
+    border-color: #FDF0D5;
+    border-width: 3px;
+}
+
+
+
+.product img{
+    border-color: #FDF0D5;
 }
 
 button:hover {
