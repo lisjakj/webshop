@@ -1,7 +1,7 @@
 .testimonials {
     background-color: #669BBC; /* Soft Blue background */
     color: #FDF0D5; /* Soft Beige text */
-    padding: 6rem 0rem;
+    padding: 2rem 0rem;
     text-align: center;
     overflow: hidden; /* Hide overflow for smooth transitions */
 }

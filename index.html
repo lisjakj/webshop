@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="css/perks.css" />
     <link rel="stylesheet" href="css/waves.css">
     <link rel="stylesheet" href="css/sale-popup.css" />
+    <link rel="stylesheet" href="css/collapsible.css">
+    <link rel="stylesheet" href="css/email-popup.css">
     <script src="js/sale-popup.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="js/navbar.js" defer></script>
     <script src="js/products.js" defer></script>
+    <script src="js/collapsible.js" defer></script>
+    <script src="js/email-popup.js" defer></script>
   </head>
   <body>
     <!-- Header and Navigation -->
@@ -45,8 +49,8 @@
         </a>
         <div class="nav-links">
           <a href="index.html" class="active">Home</a>
-          <a href="necklaces.html">Necklaces</a>
-          <a href="bracelets.html">Bracelets</a>
+          <a href="necklaces.html">For Her</a>
+            <a href="bracelets.html">For Him</a>
           <a href="cart.html">Cart</a>
           <a href="aboutus.html">About Us</a>
         </div>
@@ -259,6 +263,53 @@
       </div>
     </section>
 
+    <!-- Collapsible Section HTML -->
+<section class="collapsible-section">
+  <div class="collapsible-row" id="product-info">
+      <button class="toggle-btn" onclick="toggleSection('product-info')">
+          Product Information <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="product-info-content">
+          <p>Our products are made with premium, long-lasting materials that provide both comfort and durability. Carefully crafted for those who value quality, each item is designed to make you feel amazing, every day.</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="customer-questions">
+      <button class="toggle-btn" onclick="toggleSection('customer-questions')">
+          Frequently Asked Questions (FAQ) <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="customer-questions-content">
+          <p>Got questions? We've got answers! Discover more about sizing, customization options, and product care. If you can't find your answer here, our friendly support team is ready to help!</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="return-policy">
+      <button class="toggle-btn" onclick="toggleSection('return-policy')">
+          Easy Returns & Exchange Policy <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="return-policy-content">
+          <p>Shop with confidence! We offer a 30-day hassle-free return and exchange policy. If you're not in love with your purchase, just return it in its original condition—no questions asked. We're here to ensure you're 100% satisfied.</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="shipping-info">
+      <button class="toggle-btn" onclick="toggleSection('shipping-info')">
+          Shipping Information <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="shipping-info-content">
+          <p>We ship worldwide! All orders are processed quickly and shipped directly to your doorstep. Enjoy free shipping on orders over $50. Estimated delivery times may vary depending on your location, but we promise it's worth the wait!</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="why-us">
+      <button class="toggle-btn" onclick="toggleSection('why-us')">
+          Why Choose Us? <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="why-us-content">
+          <p>We’re committed to delivering not just products, but an experience. With top-notch quality, impeccable craftsmanship, and a dedicated customer service team, we ensure that every item brings value and joy into your life. Join thousands of happy customers today!</p>
+      </div>
+  </div>
+</section>
     
     <!-- Second Wave Separator: Blue to Beige -->
     <svg id="wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -427,6 +478,20 @@
     <div class="item-added-popup" style="border: solid; color: #fdf0d5;">
       <p>Item added to cart</p>
     </div>
+
+    
+    <!-- Email Subscription Popup -->
+<div class="email-popup" id="email-popup">
+  <div class="popup-content">
+    <h3>Stay in Touch & Save!</h3>
+    <p>We care about our customers and would love to keep in touch. Enter your email to receive an exclusive discount coupon as our thank you!</p>
+    <form id="email-form">
+      <input type="email" id="user-email" name="email" placeholder="Your email address" required />
+      <button type="submit">Get My Coupon</button>
+    </form>
+  </div>
+  <button class="close-btn" onclick="closeEmailPopup()">×</button>
+</div>
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2024 Heartistry. All rights reserved.</p>
@@ -444,5 +509,7 @@
       </p>
       
     </footer>
+
+
   </body>
 </html>

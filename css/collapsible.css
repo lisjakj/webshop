@@ -1,0 +1,80 @@
+/* Collapsible Section CSS */
+.collapsible-section {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.collapsible-row {
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    background-color: #fdf0d5; /* Beige background */
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #003049; /* Dark blue text */
+}
+
+.toggle-btn:hover{
+    background-color: #003049;
+    color: #fdf0d5;
+}
+
+.plus-icon {
+    background-color: #669bbc; /* Light blue square for plus icon */
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible-row.expanded .toggle-btn {
+    background-color: #669bbc; /* Light blue when expanded */
+    color: #003049; /* Dark blue text when expanded */
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0;
+    background-color: #fdf0d5; /* Beige background */
+    color: #003049; /* Dark blue text */
+    border-radius: 8px; /* Rounded corners for expanded box */
+    margin-top: 0.5rem;
+}
+
+.collapsible-content.expanded {
+    max-height: 200px; /* Adjust accordingly */
+    padding: 1rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .collapsible-section {
+        width: 95%;
+    }
+    .toggle-btn{
+        font-size: 0.8rem;
+    }
+}

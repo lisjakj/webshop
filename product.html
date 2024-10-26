@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/waves.css">
     <link rel="stylesheet" href="css/sale-popup.css" />
+    <link rel="stylesheet" href="css/collapsible.css">
     <script src="js/sale-popup.js"></script>
     <link
       rel="stylesheet"
@@ -21,6 +22,7 @@
     <script src="js/navbar.js" defer></script>
     <script src="js/products.js" defer></script>
     <script src="js/product-page.js"></script>
+    <script src="js/collapsible.js"></script>
   </head>
   <body>
     <!-- Header and Navigation -->
@@ -49,8 +51,8 @@
         </a>
         <div class="nav-links">
           <a href="index.html">Home</a>
-          <a href="necklaces.html">Necklaces</a>
-          <a href="bracelets.html">Bracelets</a>
+          <a href="necklaces.html">For Her</a>
+            <a href="bracelets.html">For Him</a>
           <a href="cart.html">Cart</a>
           <a href="aboutus.html">About Us</a>
         </div>
@@ -150,6 +152,8 @@
       </ul>
     </section>
 
+   
+
     <!-- Third Wave Separator: Beige to Blue -->
     <svg id="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
       <path
@@ -166,6 +170,46 @@
     <div class="item-added-popup" style="border: solid; color: #fdf0d5;">
       <p>Item added to cart</p>
     </div>
+
+
+     <!-- Collapsible Section HTML -->
+<section class="collapsible-section">
+  <div class="collapsible-row" id="details">
+      <button class="toggle-btn" onclick="toggleSection('details')">
+          Details <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="details-content">
+          <p>Here are the product details. Our jewelry is crafted with high-quality materials to ensure long-lasting beauty.</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="faq">
+      <button class="toggle-btn" onclick="toggleSection('faq')">
+          FAQ <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="faq-content">
+          <p>Frequently Asked Questions: Find answers to common questions here.</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="return-policy">
+      <button class="toggle-btn" onclick="toggleSection('return-policy')">
+          Return Policy <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="return-policy-content">
+          <p>We offer a 30-day return policy for all our items. Please make sure the item is in original condition.</p>
+      </div>
+  </div>
+
+  <div class="collapsible-row" id="shipping-policy">
+      <button class="toggle-btn" onclick="toggleSection('shipping-policy')">
+          Shipping Policy <span class="plus-icon">+</span>
+      </button>
+      <div class="collapsible-content" id="shipping-policy-content">
+          <p>We offer worldwide shipping. Shipping times may vary depending on your location.</p>
+      </div>
+  </div>
+</section>
 
     <!-- Footer Section -->
     <footer>

@@ -34,6 +34,7 @@
     background-color: #669bbc; /* Light blue */
     padding: 1rem 2rem;
     text-align: center;
+    overflow: hidden; /* Prevent overflow due to animations */
 }
 
 .story-container {
@@ -43,6 +44,7 @@
     padding: 3rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow due to animations */
 }
 
 .story-container h2,
