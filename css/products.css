@@ -297,23 +297,7 @@
     animation-delay: 7.5s;
 }
 
-/* Wave Separator */
-.wave-separator {
-    position: relative;
-    width: 100vw;
-    overflow: hidden;
-    line-height: 0;
-    height: 80px; /* Fixed height for the wave */
-    background-color: transparent;
-}
 
-.wave-separator svg {
-    display: block;
-    width: 100%; /* Ensures the wave scales horizontally */
-    height: 100%; /* Ensures the wave's height stays fixed */
-    background-color: transparent;
-    transform: translateY(-1px); /* Adjust to remove any gap */
-}
 
 /* Beige space above the wave for text */
 .wave-text-container {
@@ -364,13 +348,6 @@
 
 /* Adjust wave size and connection on larger screens */
 @media (min-width: 1024px) {
-    .wave-separator {
-        height: 80px; /* Fixed wave height for larger screens */
-    }
-
-    .wave-separator svg {
-        height: 80px; /* Keep the wave's height consistent */
-    }
 
     .wave-text-container {
         padding: 1rem 0 0.5rem; /* Reduce padding for a slimmer look */

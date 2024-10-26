@@ -4,22 +4,8 @@
     background-color: #FDF0D5; /* Beige background */
     padding: 0rem 0; /* Smaller padding overall */
     text-align: center;
-    margin: 0;
 }
 
-/* Top and Bottom Waves */
-.wave-top, .wave-bottom {
-    position: relative;
-    overflow: hidden;
-    line-height: 0;
-    margin-top: -1px; /* Ensure it touches the previous section */
-}
-
-.wave-top svg, .wave-bottom svg {
-    display: block;
-    width: 100vw;
-    height: 100px; /* Adjust height as needed */
-}
 
 /* Perks Container */
 .perks-container {
@@ -29,8 +15,8 @@
     align-items: flex-start;
     gap: 2rem;
     max-width: 1000px; /* Max width for the section */
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    margin: -5px auto;
+    padding: 2rem 0;
 }
 
 /* Perk Styling */

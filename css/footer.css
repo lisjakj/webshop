@@ -10,7 +10,6 @@ footer {
     min-height: 200px; /* Ensure a minimum height */
     z-index: 1;
     overflow: hidden; /* Ensure hill is clipped properly if the content expands */
-    width: 100vw;
 }
 
 footer::before {
@@ -27,7 +26,6 @@ footer::before {
 footer p {
     font-family: 'Lora', serif;
     font-size: 1rem;
-    margin: 0;
     line-height: 1.5; /* Better line spacing for multiple lines */
 }
 
