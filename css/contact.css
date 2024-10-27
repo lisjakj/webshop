@@ -1,0 +1,155 @@
+.contact-hero {
+    background-color: #fdf0d5; /* Beige background */
+    text-align: center;
+    padding: 4rem 0;
+    position: relative;
+    min-height: 350px;
+}
+
+.hero-content {
+    position: relative;
+    top: 2rem;
+}
+
+.hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    color: #003049;
+}
+
+.hero-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: #003049;
+}
+
+.contact-section {
+    padding: 2rem 1rem;
+    background-color: #fdf0d5;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    color: #003049;
+    line-height: 1.8;
+}
+
+.contact-container h2 {
+    font-family: "Playfair Display", serif;
+    color: #003049;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.contact-container p {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #003049;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #003049;
+    color: #fdf0d5;
+    border: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #C1121F;
+}
+
+#success-popup {
+    position: fixed;
+    top: 100px; /* Below the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fdf0d5;
+    border: 2px solid #003049;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    color: #003049;
+    display: none; /* Initially hidden */
+    z-index: 9999;
+    text-align: center;
+}
+
+#error-popup {
+    position: fixed;
+    top: 100px; /* Below the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #C1121F; /* Red background for error */
+    border: 2px solid #003049;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    color: #fdf0d5; /* White text */
+    display: none; /* Initially hidden */
+    z-index: 9999;
+    text-align: center;
+}
+
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 80px; /* A bit below the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fdf0d5; /* Beige for success popup */
+    color: #003049; /* Dark blue text */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #003049;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    z-index: 9999;
+}
+
+.popup.error {
+    background-color: #C1121F; /* Dark red for error popup */
+    color: #fdf0d5; /* Light text */
+}
+
+/* Hide popups by default */
+#success-popup, #error-popup {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+}
