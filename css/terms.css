@@ -1,0 +1,59 @@
+.terms-hero {
+    background-color: #fdf0d5; /* Beige background */
+    text-align: center;
+    padding: 4rem 0; /* Increased padding to prevent overlap with navbar */
+    position: relative;
+    min-height: 350px;
+}
+
+.hero-content {
+    position: relative;
+    top: 2rem; /* Adjusted to ensure it is not covered by the navbar */
+}
+
+.hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    color: #003049; /* Dark blue */
+}
+
+.hero-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: #003049;
+}
+
+.terms-section {
+    padding: 2rem 1rem;
+    background-color: #fdf0d5;
+}
+
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    color: #003049;
+    line-height: 1.8;
+}
+
+.terms-container h2 {
+    font-family: "Playfair Display", serif;
+    color: #003049;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.terms-container p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .terms-container {
+        padding: 1rem;
+    }
+}

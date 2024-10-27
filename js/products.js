@@ -145,3 +145,4 @@ if (addToCartButton) {
 
 // Initial update for cart icon in case items are in the cart already
 updateCartIcon();
+

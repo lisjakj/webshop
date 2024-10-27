@@ -191,6 +191,7 @@
     opacity: 0;
     transition: all 0.5s ease;
     z-index: 100;
+    text-align: center;
   }
   
   .item-added-popup.show {

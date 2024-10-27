@@ -85,3 +85,49 @@
       width: 95%;
     }
   }
+
+  /* Popup base styles */
+.popup {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: #fdf0d5; /* Default beige background for success */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    z-index: 9999;
+    text-align: center;
+    border: 2px solid #003049;
+}
+
+/* Success popup */
+.popup.success {
+    background-color: #fdf0d5; /* Beige for success */
+    color: #003049; /* Dark blue text for success */
+}
+
+/* Error popup */
+.popup.error {
+    background-color: #c1121f; /* Dark red for error */
+    color: #ffffff; /* White text for error */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .popup {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 95%;
+        max-width: 250px;
+        padding: 10px;
+    }
+}
